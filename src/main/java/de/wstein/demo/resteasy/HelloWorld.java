@@ -2,18 +2,18 @@ package de.wstein.demo.resteasy;
 
 import javax.ws.rs.*;
 
-@Path("tutorial")
+@Path("hello")
 public class HelloWorld {
 
     @GET
-    @Path("helloworld")
+    @Path("world")
     public String helloworld() {
         return "Hello World!";
     }
 
     @GET
-    @Path("helloname/{name}")
+    @Path("{name}")
     public String hello(@PathParam("name") final String name) {
-        return "Hello " + name;
+        return "Hello <b>" + name + "</b>";
     }
 }
